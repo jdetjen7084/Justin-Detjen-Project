@@ -29,6 +29,26 @@ SOmetimes you want to embed some \*stylized text\*  right into **your paragraph.
   2. Sub-item
 4. Item four
 
-[I'm a link to a web page!](http://www.google.com)
 
-![alt text](https://i.imgur.com/81qyN1y.jpg)
+
+
+
+
+
+
+
+
+
+
+
+# Justin Detjen Markdown Things
+
+1. How to tie shoes
+2. How to get around
+3. New skills
+
+### I am here because I need a new career and I am starting from scratch. I need to find a job and hope that I find it soon after this cohort is completed. This paragraph is short, so here's another sentence. I don't have a pic on here, so I reused Doge. But it works at least!
+
+[![alt text](LinkedIn_pic.jpg)
+](https://www.linkedin.com/in/justin-detjen-93557818a/)
+
