@@ -1,4 +1,17 @@
-body {
-font-family: 'Oswald', sans-serif;
+:root {
+  --primary: #6200ee;
+  --primary-variant: #3700bb;
+  --secondary: #03dac0;
+  --secondary-variant: #018718;
+  --base-spacing: 8px;
 }
 
+body {
+  font-family: "'Oswald'", sans-serif;
+  margin: calc(var(--base-spacing) * 2);
+}
+/*
+h1 {
+  background: var(--primary-variant);
+}
+ */
