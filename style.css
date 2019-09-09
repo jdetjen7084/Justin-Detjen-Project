@@ -17,6 +17,10 @@ h1 {
   background: var(--primary-variant);
 }
  */
+/*
+ nav {
+   margin: auto 50%;
+ } */
 
 .figure {
   background-color: var(--primary);
