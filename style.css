@@ -2,14 +2,14 @@
   --primary: #6200ee;
   --primary-variant: #3700bb;
   --secondary: #03dac0;
-  --secondary-variant: #018718;
+  --secondary-variant: #89043d;
   --base-spacing: 8px;
 }
 
 body {
   font-family: "'Oswald'", sans-serif;
   margin: calc(var(--base-spacing) * 2);
-  background-color: #d3c4e7
+  background-color: #d3c4e7;
 }
 
 /*
@@ -23,8 +23,8 @@ h1 {
   margin: 5px;
   padding: 5px;
   color: white;
-  text-shadow: 2px 2px #6a6d63;
-  opacity: 0.7;
+  text-shadow: 2px 2px var(--secondary-variant);
+  opacity: 0.9;
   text-align: center;
 }
 
@@ -38,8 +38,9 @@ h2 {
   font-weight: 100;
   letter-spacing: 3px;
   text-shadow: 1px 1px var(--secondary);
-  background-color: var(--primary-variant);
-  color: var(--primary-variant);
+  background-color: var(--primary);
+  color: var(--primary);
+  opacity: 0.9;
 }
 
 .button {
@@ -68,4 +69,3 @@ h2 {
 div {
   text-align: center;
 }
-
