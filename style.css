@@ -8,7 +8,7 @@
 
 body {
   font-family: "'Oswald'", sans-serif;
-  margin: calc(var(--base-spacing) * 2);
+  /* margin: calc(var(--base-spacing) * 2); */
   background-color: #d3c4e7;
 }
 
@@ -22,9 +22,10 @@ h1 {
    margin: auto 50%;
  } */
 
- h1 {
+h1 {
   font-style: oblique;
   text-align: center;
+  margin: 0;
 }
 
 h2 {
@@ -35,6 +36,13 @@ h2 {
   background-color: var(--primary);
   color: var(--primary);
   opacity: 0.9;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 section:nth-of-type(odd) {
@@ -56,12 +64,18 @@ a:link {
 .figure {
   background-color: var(--primary);
   /* margin: 5px; */
-  padding: 5px;
+  padding: 10px;
   color: white;
   text-shadow: 2px 2px var(--secondary-variant);
   opacity: 0.9;
   text-align: center;
-  margin: calc(var(--base-spacing) * 2);
+  /* margin: calc(var(--base-spacing) * 2); */
+  margin: 0;
+}
+
+img {
+  border-radius: 50%;
+  box-shadow: 2px 5px 5px darkgrey;
 }
 
 .button {
