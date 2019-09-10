@@ -57,9 +57,9 @@ div {
   text-align: center;
 }
 
-a:link {
+/* a:link {
   text-decoration: none;
-}
+} */
 
 .figure {
   background-color: var(--primary);
@@ -78,7 +78,7 @@ img {
   box-shadow: 2px 5px 5px darkgrey;
 }
 
-.button {
+/* .button {
   background-color: var(--secondary-variant);
   border: none;
   color: white;
@@ -88,9 +88,9 @@ img {
   font-size: 16px;
   text-decoration: none;
   border-radius: 4px;
-}
+} */
 
-.link {
+/* .link {
   color: var(--primary-variant);
   border: solid var(--secondary-variant);
   padding: 10px 28px;
@@ -99,4 +99,22 @@ img {
   display: inline-block;
   font-size: 14px;
   text-decoration: none;
+} */
+
+ul {
+  padding: 0;
 }
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav li {
+  padding: var(--base-spacing) 0;
+}
+
+nav a {
+  text-decoration: none;
+}
+
