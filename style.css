@@ -50,6 +50,17 @@ nav .fas {
   /* could do 80vw but less precise */
 }
 
+nav {
+  border-top: var(--border-secondary);
+  border-bottom: var(--border-secondary);
+  min-height: 72px;
+}
+
+.is-hidden {
+  font-size: 0;
+  height: 0;
+}
+
 header {
   display: flex;
   flex-direction: column;
