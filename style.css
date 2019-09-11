@@ -45,6 +45,9 @@ h2 {
 
 nav .fas {
   margin: var(--base-spacing);
+  position: absolute;
+  transform: translateX(calc(100vw - (var(--base-spacing) * 10)));
+  /* could do 80vw but less precise */
 }
 
 header {
