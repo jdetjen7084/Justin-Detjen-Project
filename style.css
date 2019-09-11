@@ -68,14 +68,6 @@ header {
   align-items: center;
 }
 
-section:nth-of-type(odd) {
-  background: white;
-}
-
-section:nth-of-type(even) {
-  background: gray;
-}
-
 div {
   text-align: center;
 }
@@ -137,9 +129,29 @@ nav li {
   padding: var(--base-spacing) 0;
 }
 
-nav a {
+nav a,
+.hero a,
+.read-more-btn {
   text-decoration: none;
 }
+
+section {
+  padding: calc(var(--base-spacing) * 3);
+}
+
+section:nth-of-type(odd) {
+  background: white;
+}
+
+section:nth-of-type(even) {
+  background: gray;
+}
+
+.hero a {
+  background: var(--secondary-variant);
+  padding: var(--base-spacing);
+  border-radius: var(--base-spacing);
+  }
 
 .hero {
   background: url(https://picsum.photos/680/420) center center no-repeat;
@@ -150,4 +162,12 @@ nav a {
   align-items: center;
   height: 20vh;
   max-height: 420px;
+}
+
+.read-more-btn {
+  background: white;
+  border-radius: var(--base-spacing);
+  padding: var(--base-spacing);
+  display: inline-block;
+  margin: var(--base-spacing) 0;
 }
