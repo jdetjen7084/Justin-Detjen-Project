@@ -39,6 +39,14 @@ h2 {
   margin: 0;
 }
 
+.fas {
+  font-size: 48px;
+}
+
+nav .fas {
+  margin: var(--base-spacing);
+}
+
 header {
   display: flex;
   flex-direction: column;
