@@ -199,6 +199,10 @@ footer ul {
     flex-direction: column;
   }
 
+  .hero {
+    height: 40vh;
+  }
+
   .is-hidden--tablet {
     font-size: 0;
     height: 0;
@@ -223,6 +227,10 @@ footer ul {
   .is-hidden--desktop {
     font-size: 0;
     height: 0;
+  }
+
+  .hero {
+    height: 40vh;
   }
 
   .is-shown--desktop {
