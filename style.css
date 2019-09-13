@@ -194,6 +194,33 @@ footer ul {
   justify-content: space-between;
 }
 
+/* Contact Form CSS */
+
+form,
+form div {
+  display: flex;
+  flex-direction: column;
+  }
+
+form {
+  padding: var(--base-spacing);
+}
+
+input,
+textarea {
+  border: solid thin black;
+  max-width: 80vw;
+}
+
+input[type="submit"] {
+  border-radius: var(--base-spacing);
+  display: inline-block;
+  margin: 8px;
+  min-height: 48px;
+  max-width: calc(var(--base-spacing)*12);
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
   header {
     display: flex;
