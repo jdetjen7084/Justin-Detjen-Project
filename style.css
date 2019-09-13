@@ -57,7 +57,7 @@ nav {
   min-height: 72px;
 }
 
-.is-hidden {
+.is-hidden--mobile {
   font-size: 0;
   height: 0;
 }
@@ -198,15 +198,34 @@ footer ul {
     display: flex;
     flex-direction: column;
   }
+
+  .is-hidden--tablet {
+    font-size: 0;
+    height: 0;
+  }
 }
 
-@media screen and (min-width: 1068px) {
+@media screen and (min-width: 1024px) {
   header {
     flex-direction: row;
     padding: var(--base-spacing);
   }
-}
 
-header figure {
-  margin-right: 16px;
+  header figure {
+    margin-right: 16px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .is-hidden--desktop {
+    font-size: 0;
+    height: 0;
+  }
+
+  .is-shown--desktop {
+    font-size: initial;
+  }
 }
