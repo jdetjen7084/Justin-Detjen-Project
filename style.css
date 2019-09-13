@@ -86,7 +86,8 @@ div {
   text-align: center;
   /* margin: calc(var(--base-spacing) * 2); */
   margin: 0;
-  /* display: inline-block; */
+  /* display: flex;
+  flex: */
 }
 
 img {
@@ -222,6 +223,14 @@ footer ul {
   nav ul {
     display: flex;
     justify-content: space-around;
+  }
+
+  section p {
+    margin-bottom: auto;
+  }
+
+  .flex-container--desktop {
+    display: flex;
   }
 
   .is-hidden--desktop {
