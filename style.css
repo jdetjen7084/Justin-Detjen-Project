@@ -48,7 +48,6 @@ nav .fas {
   margin: var(--base-spacing);
   position: absolute;
   transform: translateX(calc(100vw - (var(--base-spacing) * 10)));
-  /* could do 80vw but less precise */
 }
 
 nav {
@@ -84,10 +83,7 @@ div {
   text-shadow: 2px 2px var(--secondary-variant);
   opacity: 0.9;
   text-align: center;
-  /* margin: calc(var(--base-spacing) * 2); */
   margin: 0;
-  /* display: flex;
-  flex: */
 }
 
 img {
@@ -143,15 +139,16 @@ section {
   padding: calc(var(--base-spacing) * 3);
   display: flex;
   flex-direction: column;
+  background: var(--secondary);
 }
 
-section:nth-of-type(odd) {
+/* section:nth-of-type(odd) {
   background: white;
 }
 
 section:nth-of-type(even) {
   background: gray;
-}
+} */
 
 .hero {
   background: url(https://picsum.photos/680/420) center center no-repeat;
@@ -200,7 +197,7 @@ form,
 form div {
   display: flex;
   flex-direction: column;
-  }
+}
 
 form {
   padding: var(--base-spacing);
@@ -217,8 +214,12 @@ input[type="submit"] {
   display: inline-block;
   margin: 8px;
   min-height: 48px;
-  max-width: calc(var(--base-spacing)*12);
+  max-width: 96px;
   text-align: center;
+}
+
+.input-box {
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -234,6 +235,10 @@ input[type="submit"] {
   .is-hidden--tablet {
     font-size: 0;
     height: 0;
+  }
+
+  .input-box {
+    margin: 5px;
   }
 }
 
@@ -260,6 +265,10 @@ input[type="submit"] {
     display: flex;
   }
 
+  .flex-row--desktop {
+    flex-direction: row;
+  }
+
   .is-hidden--desktop {
     font-size: 0;
     height: 0;
@@ -272,4 +281,19 @@ input[type="submit"] {
   .is-shown--desktop {
     font-size: initial;
   }
+
+  .input-box {
+    padding: 10px;
+    justify-content: space-around;
+  }
+}
+
+/* Bonus JS Things Below */
+
+.is-error {
+  /* box-shadow: 3px 3px red; */
+}
+
+.is-success {
+  /* box-shadow: 3px 3px green; */
 }
