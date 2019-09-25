@@ -7,8 +7,8 @@ function greeter(question = "What is your quest?") {
   }
   return answer;
 }
-
 //document.querySelector('h1').textContent("Nope");
-
-document.querySelector("h1").textContent = greeter();
-
+//innerHTML will enter HTML to doc, textContent will add content but won't insert into the HTML seamlessly
+//document.querySelector("#root").innerHTML = greeter();
+//Below is template literal
+document.querySelector("#root").innerHTML = `<p>Your quest is ${greeter}</p>`
