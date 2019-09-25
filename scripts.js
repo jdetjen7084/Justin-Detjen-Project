@@ -19,7 +19,12 @@
 const hamburger = document.querySelector(".fa-bars");
 const hiddenUL = document.querySelector("ul");
 
-hamburger.addEventListener("click", function() {
+// hamburger.addEventListener("click", function() {
+//   // hiddenUL.classList.remove("is-hidden--mobile");
+//   hiddenUL.classList.toggle("is-hidden--mobile");
+// } );
+//Arrow notation, same as above
+hamburger.addEventListener("click"() => {
   // hiddenUL.classList.remove("is-hidden--mobile");
   hiddenUL.classList.toggle("is-hidden--mobile");
 } );
