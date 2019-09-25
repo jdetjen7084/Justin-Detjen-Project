@@ -1,5 +1,3 @@
-import { createPublicKey } from "crypto";
-
 // //const msg = prompt("What is your name?");
 // //If answer is blank, ask again:
 // function greeter(question = "What is your quest?") {
@@ -18,10 +16,10 @@ import { createPublicKey } from "crypto";
 //Below is JS for project
 //select fa-hamburger, listen for click on hamburger
 //remove 'mobile hidden' class
-const hamburger = document.querySelector('.fa-bars');
+const hamburger = document.querySelector(".fa-bars");
 const hiddenUL = document.querySelector("ul");
 
-hamburger.addEventListener('click', function() {
-
-} )
-
+hamburger.addEventListener("click", function() {
+  // hiddenUL.classList.remove("is-hidden--mobile");
+  hiddenUL.classList.toggle("is-hidden--mobile");
+} );
