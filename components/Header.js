@@ -1,4 +1,5 @@
-export default `<header>
+export default function(heading) {
+  return `<header>
       <figure class="figure">
         <img
           srcset="
@@ -10,7 +11,8 @@ export default `<header>
           src="https://picsum.photos/200/300"
           alt="Lorem Picsum"
         />
-        <h1>Justin Detjen Practice Project</h1>
+        <h1>${heading}</h1>
       </figure>
     </header>
 `;
+}
