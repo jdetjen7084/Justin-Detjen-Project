@@ -1,4 +1,4 @@
-export default function(footer) {
+export default function(footer = 2019) {
 return `<footer>
       <ul>
         <li class="link"><a href="./index.html">Home</a></li>
@@ -7,7 +7,7 @@ return `<footer>
         <li class="link"><a href="./gallery/">Gallery</a></li>
         <li class="link"><a href="./blog/">Blog</a></li>
       </ul>
-      <p>&copy; 2019 Justin Detjen &bullet; No rights reserved</p>
+      <p>&copy; ${footer} Justin Detjen &bullet; No rights reserved</p>
     </footer>
 `;
 }

@@ -1,4 +1,4 @@
-export default function(heading) {
+export default function(heading = "Justin Detjen Project") {
   return `<header>
       <figure class="figure">
         <img
