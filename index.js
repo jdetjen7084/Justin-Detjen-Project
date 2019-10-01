@@ -33,4 +33,14 @@ document.querySelector("#root").innerHTML = `
 //const {name, catchPhrase} = name;
 //is same as
 //const catchPhrase = myObj.catchPhrase;
+const aboutLink = document.querySelector('#about');
+
+aboutLink.addEventListener('click', function (event){
+  event.preventDefault();
+  console.log(state[event.target.textContent]);
+  console.log('You clicked')
+});
+//todo: Re-render the page using the appropriate data from state so that it updates with the new info
+//hint: render()
+
 
