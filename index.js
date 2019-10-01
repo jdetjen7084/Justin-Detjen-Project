@@ -5,10 +5,22 @@
 
 import { Header, Nav, Main, Footer } from "./components";
 
+//State used to render appropriate heading depending on the
+//state of the app (what page is currently being displayed)
+const state = {
+  home: {
+    heading: 'Home Page'
+  },
+  about: {
+    heading: 'About Page'
+  }
+}
+
+
 // Grab #root div to assign the markup that is
 // contained in the components
 document.querySelector("#root").innerHTML = `
-  ${Header()}
+  ${Header(state.home.heading)}
   ${Nav()}
   ${Main()}
   ${Footer()}
