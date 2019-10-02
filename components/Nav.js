@@ -13,3 +13,7 @@ export default function(nav) {
 }
 
 //todo: receive a list or links and dynamically build the navigation menu
+function linksBuilder(links) {
+  //needs to display a list of <li> for nav
+
+}
