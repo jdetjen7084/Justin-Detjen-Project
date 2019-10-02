@@ -191,6 +191,7 @@ footer a {
   background: var(--secondary-variant);
   padding: var(--base-spacing);
   border-radius: var(--base-spacing);
+  color: white;
 }
 
 footer ul {
