@@ -35,15 +35,23 @@ render();
 //const {name, catchPhrase} = name;
 //is same as
 //const catchPhrase = myObj.catchPhrase;
-const aboutLink = document.querySelector('#about');
+const links = document.querySelectorAll('nav a');
+console.log(links);
+console.log(links[3]);
+//use for loop to log out the textContent property of each link
+for (let i = 1; i < 4; i += 1) {
+  //const prop = links(i.textContent);
+    links[i].addEventListener('click', function(event){
+    event.preventDefault();
+    //console.log(state[event.target.textContent]);
+    //const aboutElement = event.target;
+    //const aboutText = event.target.textContent;
+    console.log(state[event.target.textContent])
+    //todo:
+  })
+}
 
-aboutLink.addEventListener('click', function(event){
-  event.preventDefault();
-  //console.log(state[event.target.textContent]);
-  //const aboutElement = event.target;
-  //const aboutText = event.target.textContent;
-  render(state[event.target.textContent]);
-});
+//render(state[event.target.textContent]);
 
 
 
