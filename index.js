@@ -16,31 +16,34 @@ const state = {
   }
 }
 
-
 // Grab #root div to assign the markup that is
 // contained in the components
+//st will represent a piece of state
+function render(st = state.home) {
 document.querySelector("#root").innerHTML = `
-  ${Header(state.home.heading)}
+  ${Header(st.heading)}
   ${Nav()}
   ${Main()}
   ${Footer()}
 `;
+}
 
+render();
 // Object Destructuring
 //const { name } = myObj;
 //console.log(name);
-
 //const {name, catchPhrase} = name;
 //is same as
 //const catchPhrase = myObj.catchPhrase;
 const aboutLink = document.querySelector('#about');
 
-aboutLink.addEventListener('click', function (event){
+aboutLink.addEventListener('click', function(event){
   event.preventDefault();
-  console.log(state[event.target.textContent]);
-  console.log('You clicked')
+  //console.log(state[event.target.textContent]);
+  //const aboutElement = event.target;
+  //const aboutText = event.target.textContent;
+  render(state[event.target.textContent]);
 });
-//todo: Re-render the page using the appropriate data from state so that it updates with the new info
-//hint: render()
+
 
 
