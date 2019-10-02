@@ -13,6 +13,9 @@ const state = {
   },
   about: {
     heading: 'About Page'
+  },
+  contact: {
+
   }
 }
 
@@ -47,11 +50,11 @@ for (let i = 1; i < 4; i += 1) {
     //const aboutElement = event.target;
     //const aboutText = event.target.textContent;
     console.log(state[event.target.textContent])
-    //todo:
+    //render(state[event.target.textContent.toLowerCase()]);
   })
 }
+//todo: Add links array to each piece of state
 
-//render(state[event.target.textContent]);
 
 
 

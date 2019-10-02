@@ -11,3 +11,5 @@ export default function(nav) {
     </nav>
 `;
 }
+
+//todo: receive a list or links and dynamically build the navigation menu
