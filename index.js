@@ -9,19 +9,24 @@ import { Header, Nav, Main, Footer } from "./components";
 //state of the app (what page is currently being displayed)
 const state = {
   home: {
-    heading: 'Home Page'
+    heading: 'Home Page',
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   },
   about: {
-    heading: 'About Page'
+    heading: 'About Page',
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   },
   contact: {
-    heading: 'Contact Page'
+    heading: 'Contact Page',
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   },
   gallery: {
-    heading: 'Gallery Page'
+    heading: 'Gallery Page',
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   },
   blog: {
-    heading: 'Blog Page'
+    heading: 'Blog Page',
+    links: ["Home", "About", "Contact", "Blog", "Gallery"]
   }
 }
 
@@ -30,24 +35,19 @@ const state = {
 //st will represent a piece of state
 function render(st = state.home) {
 document.querySelector("#root").innerHTML = `
-  ${Header(st.heading)}
-  ${Nav()}
+  ${Header(st)}
+  ${Nav(st)}
   ${Main()}
   ${Footer()}
 `;
 }
 
 render();
-// Object Destructuring
-//const { name } = myObj;
-//console.log(name);
-//const {name, catchPhrase} = name;
-//is same as
-//const catchPhrase = myObj.catchPhrase;
-const links = document.querySelectorAll('nav a');
+
+const links = document.querySelectorAll("nav a, footer a");
 //console.log(links);
 //console.log(links[3]);
-//use for loop to log out the textContent property of each link
+
 for (let i = 0; i < links.length; i += 1) {
   //const prop = links(i.textContent);
     links[i].addEventListener('click', function(event){
@@ -59,5 +59,10 @@ for (let i = 0; i < links.length; i += 1) {
 //todo: Add links array to each piece of state
 
 
-
+// Object Destructuring
+//const { name } = myObj;
+//console.log(name);
+//const {name, catchPhrase} = name;
+//is same as
+//const catchPhrase = myObj.catchPhrase;
 
