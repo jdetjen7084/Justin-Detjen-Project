@@ -5,35 +5,12 @@
 
 import { Header, Nav, Main, Footer } from "./components";
 
-//State used to render appropriate heading depending on the
-//state of the app (what page is currently being displayed)
-const state = {
-  home: {
-    heading: 'Home Page',
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  },
-  about: {
-    heading: 'About Page',
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  },
-  contact: {
-    heading: 'Contact Page',
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  },
-  gallery: {
-    heading: 'Gallery Page',
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  },
-  blog: {
-    heading: 'Blog Page',
-    links: ["Home", "About", "Contact", "Blog", "Gallery"]
-  }
-}
+import { Home, About, Contact, Blog, Gallery, Links } from "./store";
 
 // Grab #root div to assign the markup that is
 // contained in the components
 //st will represent a piece of state
-function render(st = state.home) {
+function render(st = Home) {
 document.querySelector("#root").innerHTML = `
   ${Header(st)}
   ${Nav(st)}
@@ -53,7 +30,7 @@ for (let i = 0; i < links.length; i += 1) {
     links[i].addEventListener('click', function(event){
     event.preventDefault();
     //console.log(state[event.target.textContent.toLowerCase()]);
-    render(state[event.target.textContent.toLowerCase()]);
+    render(event.target.textContent);
   })
 }
 //todo: Add links array to each piece of state
