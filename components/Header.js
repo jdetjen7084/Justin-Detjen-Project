@@ -1,5 +1,5 @@
-export default function(st) {
-  return `<header>
+export default(st) =>
+`<header>
       <figure class="figure">
         <img
           srcset="
@@ -15,4 +15,4 @@ export default function(st) {
       </figure>
     </header>
 `;
-}
+
