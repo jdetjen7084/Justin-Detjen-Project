@@ -4,16 +4,18 @@
 //import Nav from "./components/Nav";
 
 import { Header, Nav, Main, Footer } from "./components";
-
-import { Home, About, Contact, Blog, Gallery, Links } from "./store";
+import * as state from "./store";
+console.log(state);
+// import { Home, About, Contact, Blog, Gallery, Links } from "./store";
 
 // Grab #root div to assign the markup that is
 // contained in the components
 //st will represent a piece of state
-function render(st = Home) {
+
+function render(st = state.Home) {
 document.querySelector("#root").innerHTML = `
   ${Header(st)}
-  ${Nav(st)}
+  ${Nav()}
   ${Main()}
   ${Footer()}
 `;
@@ -30,7 +32,7 @@ for (let i = 0; i < links.length; i += 1) {
     links[i].addEventListener('click', function(event){
     event.preventDefault();
     //console.log(state[event.target.textContent.toLowerCase()]);
-    render(event.target.textContent);
+    render(state[event.target.textContent]);
   })
 }
 //todo: Add links array to each piece of state
