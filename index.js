@@ -24,18 +24,23 @@ document.querySelector("#root").innerHTML = `
 render();
 
 const links = document.querySelectorAll("nav a, footer a");
-//console.log(links);
-//console.log(links[3]);
 
-for (let i = 0; i < links.length; i += 1) {
-  //const prop = links(i.textContent);
-    links[i].addEventListener('click', function(event){
-    event.preventDefault();
-    //console.log(state[event.target.textContent.toLowerCase()]);
-    render(state[event.target.textContent]);
-  })
-}
-//todo: Add links array to each piece of state
+links.forEach(link => links[i].addEventListener('click', function(event){
+  event.preventDefault();
+  //console.log(state[event.target.textContent.toLowerCase()]);
+  render(state[event.target.textContent]));
+})
+
+//todo: check over the above section for the missing item
+
+// for (let i = 0; i < links.length; i += 1) {
+//   //const prop = links(i.textContent);
+//     links[i].addEventListener('click', function(event){
+//     event.preventDefault();
+//     //console.log(state[event.target.textContent.toLowerCase()]);
+//     render(state[event.target.textContent]);
+//   })
+// }
 
 
 // Object Destructuring
