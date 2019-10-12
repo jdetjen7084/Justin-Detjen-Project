@@ -25,13 +25,11 @@ render();
 
 const links = document.querySelectorAll("nav a, footer a");
 
-links.forEach(link => links[i].addEventListener('click', function(event){
+links.forEach(link => link.addEventListener('click', event =>{
   event.preventDefault();
   //console.log(state[event.target.textContent.toLowerCase()]);
-  render(state[event.target.textContent]));
-})
-
-//todo: check over the above section for the missing item
+  render(state[event.target.textContent]);
+}));
 
 // for (let i = 0; i < links.length; i += 1) {
 //   //const prop = links(i.textContent);
