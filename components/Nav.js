@@ -2,7 +2,7 @@ import { Links } from "../store"
 
 function linksBuilder(links) {
 
-  return links.map(link => `<li><a href="./${link}">${link}</a></li>`).join(" ");
+  return links.map(link => `<li><a href="./${link}" data-navigo>${link}</a></li>`).join(" ");
   //had to put .join() in because commas showed up in the nav
   // let linksHTML = "";
   // for (let i = 0; i < links.length; i +=1) {

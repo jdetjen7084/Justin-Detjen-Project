@@ -27,18 +27,22 @@ document.querySelector("#root").innerHTML = `
   ${Footer()}
 `;
 
-const links = document.querySelectorAll("nav a, footer a");
+//because data-navigo was used in nav page, this is all that's needed for the following block
+router.updatePageLinks();
+// const links = document.querySelectorAll("nav a, footer a");
 
-links.forEach(link => link.addEventListener('click', event =>{
-  event.preventDefault();
-  render(state[event.target.textContent]);
-}));
-}
+// links.forEach(link => link.addEventListener('click', event =>{
+//   event.preventDefault();
+//   render(state[event.target.textContent]);
+// }));
+// }
+
 //This renders the page, but with navigo this line isn't necessary
 //render(state[location.pathname.slice(1)]);
 
 router
 // Developer's Note: ':page' can be whatever you want to name the key that comes into `params` Object Literal
+//todo: create 404 page and route bad routes..?
   .on(":page", params => render(state[`${params.page.slice(0, 1).toUpperCase()}${params.page.slice(1).toLowerCase()}`]))
   .on("/", render())
   .resolve();
