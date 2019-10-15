@@ -1,14 +1,15 @@
 
 import { Header, Nav, Main, Footer } from "./components";
 import * as state from "./store";
-//uppercase indicates it's a constructor function
+
+// uppercase indicates it's a constructor function
 import Navigo from "navigo";
+
 const router = new Navigo(location.origin);
 
 // Grab #root div to assign the markup that is
 // contained in the components
 //st will represent a piece of state
-
 function render(st = state.Home) {
 document.querySelector("#root").innerHTML = `
   ${Header(st)}
@@ -19,6 +20,8 @@ document.querySelector("#root").innerHTML = `
 
 //because data-navigo was used in nav page, this is all that's needed for the following block
 router.updatePageLinks();
+
+}
 
 router
 // Developer's Note: ':page' can be whatever you want to name the key that comes into `params` Object Literal
