@@ -35,7 +35,13 @@ links.forEach(link => link.addEventListener('click', event =>{
 }));
 }
 //This renders the page, but with navigo this line isn't necessary
-render(state[location.pathname.slice(1)]);
+//render(state[location.pathname.slice(1)]);
+
+router
+// Developer's Note: ':page' can be whatever you want to name the key that comes into `params` Object Literal
+  .on(":page", params => render(state[params.page]))
+  .on("/", render())
+  .resolve();
 
 // for (let i = 0; i < links.length; i += 1) {
 //   //const prop = links(i.textContent);
