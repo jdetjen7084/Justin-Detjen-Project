@@ -56,11 +56,9 @@ router
 //   })
 // }
 
-
 // Object Destructuring
 //const { name } = myObj;
 //console.log(name);
 //const {name, catchPhrase} = name;
 //is same as
 //const catchPhrase = myObj.catchPhrase;
-
