@@ -5,6 +5,15 @@
 
 import { Header, Nav, Main, Footer } from "./components";
 import * as state from "./store";
+//uppercase indicates it's a constructor function
+import Navigo from "navigo";
+
+const router = new Navigo(location.origin);
+
+//console.log(Navigo);
+console.log(router);
+//console.log(location.origin);
+
 //console.log(location.pathname.slice(1));
 // Grab #root div to assign the markup that is
 // contained in the components
@@ -26,7 +35,7 @@ links.forEach(link => link.addEventListener('click', event =>{
 }));
 }
 //This renders the page, but with navigo this line isn't necessary
-//render(state[location.pathname.slice(1)]);
+render(state[location.pathname.slice(1)]);
 
 // for (let i = 0; i < links.length; i += 1) {
 //   //const prop = links(i.textContent);
