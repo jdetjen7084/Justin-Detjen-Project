@@ -5,7 +5,6 @@
 
 import { Header, Nav, Main, Footer } from "./components";
 import * as state from "./store";
-console.log(state);
 // import { Home, About, Contact, Blog, Gallery, Links } from "./store";
 
 // Grab #root div to assign the markup that is
@@ -16,20 +15,19 @@ function render(st = state.Home) {
 document.querySelector("#root").innerHTML = `
   ${Header(st)}
   ${Nav()}
-  ${Main()}
+  ${Main(st)}
   ${Footer()}
 `;
-}
-
-render();
 
 const links = document.querySelectorAll("nav a, footer a");
 
 links.forEach(link => link.addEventListener('click', event =>{
   event.preventDefault();
-  //console.log(state[event.target.textContent.toLowerCase()]);
   render(state[event.target.textContent]);
 }));
+}
+
+render();
 
 // for (let i = 0; i < links.length; i += 1) {
 //   //const prop = links(i.textContent);
