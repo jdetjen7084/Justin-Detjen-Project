@@ -5,8 +5,7 @@
 
 import { Header, Nav, Main, Footer } from "./components";
 import * as state from "./store";
-// import { Home, About, Contact, Blog, Gallery, Links } from "./store";
-
+//console.log(location.pathname.slice(1));
 // Grab #root div to assign the markup that is
 // contained in the components
 //st will represent a piece of state
@@ -26,8 +25,8 @@ links.forEach(link => link.addEventListener('click', event =>{
   render(state[event.target.textContent]);
 }));
 }
-
-render();
+//This renders the page, but with navigo this line isn't necessary
+//render(state[location.pathname.slice(1)]);
 
 // for (let i = 0; i < links.length; i += 1) {
 //   //const prop = links(i.textContent);
