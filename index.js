@@ -4,6 +4,9 @@ import * as state from "./store";
 
 // uppercase indicates it's a constructor function
 import Navigo from "navigo";
+import axios from "axios";
+
+console.log(axios);
 
 const router = new Navigo(location.origin);
 
@@ -29,3 +32,13 @@ router
   .on(":page", params => render(state[`${params.page.slice(0, 1).toUpperCase()}${params.page.slice(1).toLowerCase()}`]))
   .on("/", render())
   .resolve();
+
+
+  //Built SPA according to the Model View Updater using
+  // uni-directional data flow (only goes one way)
+  //State(Model) to Components(is the View) which renders functions
+  //to the Updater (Navigo)
+  //State is the Single Source of Truth
+  //State is the motor, Components display, when something
+  //is changed/clicked, the Updater sends an order to State
+  //and the Components re-render
