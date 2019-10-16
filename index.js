@@ -38,23 +38,6 @@ router
 
 
 
-  // .then(response => {
-  //   state.Blog.main = response.data;
-  //   // const firstPost = response.data[0];
-  //   console.log(response.data);
-  // })
-
-
-  //   console.log(response.data))
-  // .catch(err => console.log(err));
-  // axios
-  // .get("https://jsonplaceholder.typicode.com/posts")
-  // .then(response => console.log(response.data))
-  // .catch(err => console.log(err));
-
-
-
-
 
   //Built SPA according to the Model View Updater using
   // uni-directional data flow (only goes one way)
