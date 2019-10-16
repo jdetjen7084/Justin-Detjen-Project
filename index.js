@@ -23,7 +23,6 @@ document.querySelector("#root").innerHTML = `
 
 //because data-navigo was used in nav page, this is all that's needed for the following block
 router.updatePageLinks();
-
 }
 
 router
@@ -32,6 +31,11 @@ router
   .on(":page", params => render(state[`${params.page.slice(0, 1).toUpperCase()}${params.page.slice(1).toLowerCase()}`]))
   .on("/", render())
   .resolve();
+
+  axios
+  .get("https://jsonplaceholder.typicode.com/posts")
+  .then(response => console.log(response.data))
+  .catch(err => (console.log(err)));
 
 
   //Built SPA according to the Model View Updater using
