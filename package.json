@@ -1,7 +1,7 @@
 {
-  "name": "justindetjen",
+  "name": "manavmisra",
   "version": "1.0.0",
-  "description": "Practice_Project",
+  "description": "Practice project for Savvy Coders",
   "main": "index.html",
   "scripts": {
     "serve": "parcel index.html",
@@ -9,25 +9,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jdetjen7084/Justin-Detjen-Project.git"
+    "url": "git+https://github.com/manavm1990/savvy-coders-portfolio.git"
   },
   "keywords": [
-    "HTML",
-    "CSS",
-    "JS"
+    "html",
+    "css",
+    "js",
+    "spa"
   ],
-  "author": "Justin Detjen",
+  "author": "Manav Misra",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jdetjen7084/Justin-Detjen-Project/issues"
+    "url": "https://github.com/manavm1990/savvy-coders-portfolio/issues"
   },
-  "homepage": "https://github.com/jdetjen7084/Justin-Detjen-Project#readme",
+  "homepage": "https://github.com/manavm1990/savvy-coders-portfolio#readme",
   "devDependencies": {
     "eslint": "^6.2.2",
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.3",
-    "http-server": "^0.11.1",
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.18.2",
     "stylelint": "^10.1.0",
