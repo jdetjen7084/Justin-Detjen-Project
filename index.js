@@ -53,6 +53,9 @@ router
         </article>
       `
       ).join("");
+      if (capitalize(router.lastRouteResolved().params.page === "Blog")){
+        render(state.Blog);
+      }
       console.log(router.lastRouteResolved());
     })
     .catch(err => console.log(err));
