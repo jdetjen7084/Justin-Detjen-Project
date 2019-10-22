@@ -77,12 +77,12 @@ router
       `<div class="gallery">` +
       querySnapshots.docs
         .map(doc => {
-          const { caption, credit, IMG } = doc.data();
+          const { caption, IMG } = doc.data();
 
           return `
         <figure>
           <img src="${IMG}" alt="">
-          <figcaption>${caption} - ${credit}</figcaption>
+          <figcaption>${caption}</figcaption>
         </figure>
       `;
         })
