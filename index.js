@@ -7,6 +7,8 @@ import Navigo from "navigo";
 import axios from "axios";
 import { capitalize } from "lodash";
 
+import { db } from "./firebase";
+
 const router = new Navigo(location.origin);
 
 // Grab #root div to assign the markup that is
@@ -53,7 +55,7 @@ router
         </article>
       `
       ).join("");
-      if (capitalize(router.lastRouteResolved().params.page === "Blog")){
+      if (router.lastRouteResolved().params && capitalize(router.lastRouteResolved().params.page === "Blog")){
         render(state.Blog);
       }
       console.log(router.lastRouteResolved());
