@@ -7,8 +7,8 @@ import Navigo from "navigo";
 import axios from "axios";
 import { capitalize } from "lodash";
 
-import { db } from "./firebase";
-import { QuerySnapshot } from "@firebase/firestore-types";
+import { auth, db } from "./firebase";
+//import { QuerySnapshot } from "@firebase/firestore-types";
 
 const router = new Navigo(location.origin);
 
