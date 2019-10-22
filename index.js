@@ -5,8 +5,7 @@ import * as state from "./store";
 // uppercase indicates it's a constructor function
 import Navigo from "navigo";
 import axios from "axios";
-
-// console.log(axios);
+import { capitalize } from "lodash";
 
 const router = new Navigo(location.origin);
 
@@ -25,16 +24,39 @@ document.querySelector("#root").innerHTML = `
 router.updatePageLinks();
 }
 
-router
 // Developer's Note: ':page' can be whatever you want to name the key that comes into `params` Object Literal
-  .on(":page", params => render(state[`${params.page.slice(0, 1).toUpperCase()}${params.page.slice(1).toLowerCase()}`]))
+router
+  .on(":page", params =>
+  render(
+    state[
+    capitalize(params.page)]
+  )
+  )
   .on("/", () => render())
   .resolve();
 
+  // axios
+  // .get("https://jsonplaceholder.typicode.com/posts")
+  // .then(response => {
+  //   state.Blog.main = response.data.map(post => console.log(post))
+  // })
+  // .catch(err => console.log(err));
+
   axios
-  .get("https://jsonplaceholder.typicode.come/posts")
-  .then(response => console.log(response.data))
-  .catch(err => console.log(err));
+    .get("https://jsonplaceholder.typicode.com/posts")
+    .then(response => {
+      state.Blog.main = response.data.map(
+        ({title, body}) => `
+        <article>
+          <h2>${title}</h2>
+          <p>${body}</p>
+        </article>
+      `
+      ).join("");
+      console.log(router.lastRouteResolved());
+    })
+    .catch(err => console.log(err));
+
 
 
 
