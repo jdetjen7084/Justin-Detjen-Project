@@ -8,6 +8,7 @@ import axios from "axios";
 import { capitalize } from "lodash";
 
 import { db } from "./firebase";
+import { QuerySnapshot } from "@firebase/firestore-types";
 
 const router = new Navigo(location.origin);
 
@@ -62,8 +63,40 @@ router
     })
     .catch(err => console.log(err));
 
+    //Gallery stuff
 
+    //todo: match names in firebase with the const names and template literals
+//pass in name of collection in first line, then get, then you have to use .then
+//querySnapshots.docs is an array, so you have to use .map
+//combining const with destructuring to create three variables from the keys in our obj literal
+//have to work down to get the info that is in firebase
+  db.collection("Pictures")
+  .get()
+  .then(querySnapshots => {
+    state.Gallery.main =
+      `<div class="gallery">` +
+      querySnapshots.docs
+        .map(doc => {
+          const { caption, credit, IMG } = doc.data();
 
+          return `
+        <figure>
+          <img src="${IMG}" alt="">
+          <figcaption>${caption} - ${credit}</figcaption>
+        </figure>
+      `;
+        })
+        .join(" ") +
+      `</div>`;
+
+    if (
+      router.lastRouteResolved().params &&
+      capitalize(router.lastRouteResolved().params.page) === "Gallery"
+    ) {
+      render(state.Gallery);
+    }
+  })
+  .catch(err => console.error("Error loading pics", err));
 
 
   //Built SPA according to the Model View Updater using
